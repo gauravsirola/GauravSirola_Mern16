@@ -25,7 +25,7 @@
             border-style: solid;
             border-radius: 10% 10% 10% 10%;
             margin: 1rem 0rem 1rem 0rem;
-            padding: 2rem 2rem 2rem 2rem;
+            padding: 2rem;
             
         }
 
@@ -34,8 +34,8 @@
             flex-direction: column;
             align-items: center;
             gap: 1rem;
-            border-style: solid;
-            border-color: white white darkgray white;
+            border-bottom-style: solid;
+            border-bottom-color: darkgray;
             padding: 0rem 0rem 1rem 0rem;;
 
         }
@@ -48,7 +48,7 @@
         .header-contact-container {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: space-between;
             width: 60vw;
             align-items: center;
         }
@@ -71,14 +71,15 @@
 
         .bottom-container {
             display: grid;
-            grid-template-columns: 20% 80%;
+            grid-template-columns: 25% 75%;
             margin-top: 1.5rem;
         }
 
         .left-container {
             display: flex;
             flex-direction: column;
-            width: fit-content;
+            /* gap: 0.00rem; */
+
         }
         
 
@@ -89,7 +90,7 @@
         }
 
         .education-container, .projects-container {
-            width: 55rem;
+            /* width: 55rem; */
             margin-bottom: 1.5rem;
             
         }
@@ -103,7 +104,7 @@
     }
 
         .common-header {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: bold;
             border-bottom: 2px solid black;
             margin-bottom: 0.5rem;
@@ -128,6 +129,14 @@
 
         }
 
+        .company-name {
+            font-size: 1.1rem;
+            text-decoration: underline;
+        }
+
+        .project-title {
+            text-decoration: underline;
+        }
 
 
     </style>
@@ -146,7 +155,7 @@
                         <i class='fa fa-github'></i> Github
                     </a>
                     <a href="https://www.linkedin.com/in/gauravsirola95/" class="contact-linkedin" target="_blank">
-                        <img src="linkedin_logo.png" alt="Linkedin" width="19" height="19"> Linkedin
+                        <img src="linkedin-logo.png" alt="Linkedin" width="19" height="19"> Linkedin
                     </a>
                 </section>
             </section>
@@ -221,75 +230,112 @@
                         <section class="experience-container">
                             <section class="experience">
                                 <section class="experience-header">
-                                    <section>EXL Service: Senior Consultant</section> 
+                                    <section class="company-name">EXL Service: Senior Consultant</section> 
                                     <section>(January 2022 - Present)</section>
                                 </section>
                                 <ul>
                                     <li>Current Role: Creating Gen AI based solution related to Code/Data Migration based projects</li>
                                     <li>Projects:
                                         <ul>
-                                            <li>Data Harbor[POC]: Extracting Data Lineage from SSIS/DataStage/Alteryx generated XMLs for Data Governance</li>
-                                            <li>Code Harbor[POC]: Converting SAS code base into Python code using smart context based conversion and iterative debugging.</li>
-                                            <li>Injury Claim Prediction: Framework for estimating likelihood of injury claim based on the available information in the system.</li>
+                                            <li class="project-title">Data Harbor[POC]</li>
+                                                <ul> 
+                                                    <li>Description: Data Lineage from SSIS/DataStage/Alteryx generated XMLs for Data Governance</li>
+                                                    <li>Techstack: Python, OpenAI, Prompt Engineering, Workflows</li>
+                                                </ul>
+                                            <li class="project-title">Code Harbor[POC]</li>
+                                                <ul> 
+                                                    <li>Description: Converting SAS code base into Python code using smart context based conversion and iterative debugging.</li>
+                                                    <li>Techstack: Finetuning, AWS, Q-LoRA, FSDP</li>
+                                                </ul>
+                                            <li class="project-title">Injury Claim Prediction</li>
+                                                <ul> 
+                                                    <li>Description:Framework for estimating likelihood of injury claim based on the available information in the system.</li>
+                                                    <li>Techstack: Python, XGBoost</li>
+                                                </ul>
                                         </ul>
                                     </li>
                                 </ul>
                             </section>
                             <section class="experience">
                                 <section class="experience-header">
-                                    <section>Citibank: Specialized Analytics Analyst </section>
+                                    <section class="company-name">Citibank: Specialized Analytics Analyst </section>
                                     <section>(January 2020 - December 2021)</section>
                                 </section>
                                 <ul>
                                     <li>Role: Part of Digital Modelling Team and built ML based models for catering US market solutions.</li>
                                     <li>Projects:
                                         <ul>
-                                            <li>Traffic Model Framework: Framework to dynamically decide ads domain selection for customer visiting the website.</li>
-                                            <li>Customer Profiling Analysis: Analyzed customer profiles visiting different citi websites to create better strategy related to customer engagement.</li>
+                                            <li class="project-title">Traffic Model Framework:</li>
+                                            <ul>
+                                                <li>Description: Framework to dynamically decide ads domain selection for customer visiting the website.</li>
+                                                <li>Techstack: Python, XGBoost, Logistic Regression, KS, Excel</li>
+                                            </ul>
+                                            <li class="project-title">Customer Profiling Analysis:</li>
+                                            <ul>
+                                                <li>Description: Analyzed customer profiles visiting different citi websites to create better strategy related to customer engagement.</li>
+                                                <li>Techstack: SQL, Adobe Analytics, Excel, Powerpoint</li>
+                                            </ul>
                                         </ul>
                                     </li>
                                 </ul>
                             </section>
                             <section class="experience">
                                 <section class="experience-header">
-                                    <section>Impact Analytics: Data Scientist </section>
+                                    <section class="company-name">Impact Analytics: Data Scientist </section>
                                     <section>(August 2018 - December 2019)</section>
                                 </section>
                                 <ul>
                                     <li>Role: Worked as a Data Scientist for clients in the retail domain, building forecasting models and analytics frameworks to drive revenue planning and assortment strategies.</li>
                                     <li>Projects:
                                         <ul>
-                                            <li>Revenue Forecasting Model: Developed a daily revenue forecasting model for offline stores using time series data and event flags, integrating XGBoost with decomposition to achieve ~70% accuracy.</li>
-                                            <li>Apparel Assortment Framework: Built a Python (Scrapy) framework to web-scrape e-commerce data, analyzing product trends to deliver insights for inventory and assortment decisions.</li>
+                                            <li class="project-title">Revenue Forecasting Model</li>
+                                                <ul> 
+                                                    <li>Description: Developed a daily revenue forecasting model for offline stores using time series data and event flags, integrating XGBoost with decomposition to achieve ~70% accuracy.</li>
+                                                    <li>Techstack: Python, XGBoost, Time Series Decomposition</li>
+                                                </ul>
+                                            <li class="project-title">Apparel Assortment Framework</li>
+                                                <ul> 
+                                                    <li>Description: Built a Python (Scrapy) framework to web-scrape e-commerce data, analyzing product trends to deliver insights for inventory and assortment decisions.</li>
+                                                    <li>Techstack: Python, XGBoost, Scrappy</li>
+                                                </ul>
                                         </ul>
                                     </li>
                                 </ul>
                             </section>
                             <section class="experience">
                                 <section class="experience-header">
-                                    <section>Impact Analytics: Data Science Intern </section>
+                                    <section class="company-name">Impact Analytics: Data Science Intern </section>
                                     <section>(May 2018 - July 2018)</section>
                                 </section>
                                 <ul>
                                     <li>Role: Kick-started career as a Data Science Intern, focusing on understanding business requirements and delivering actionable solutions.</li>
                                     <li>Projects:
                                         <ul>
-                                            <li>Inventory Replenishment Tool: Managed an inventory tool for a leading US jewelry retailer, ensuring optimal stock levels and accurate inventory planning.</li>
+                                            <li class="project-title">Inventory Replenishment Tool</li>
+                                                <ul> 
+                                                    <li>Description:Managed an inventory tool for a leading US jewelry retailer, ensuring optimal stock levels and accurate inventory planning.</li>
+                                                    <li>Techstack: R, Excel</li>
+                                                </ul>
+        
                                         </ul>
                                     </li>
                                 </ul>
                             </section>
                             <section class="experience">
                                 <section class="experience-header">
-                                    <section>Dr. Reddy's Laboratories: Technical Trainee </section>
+                                    <section class="company-name">Dr. Reddy's Laboratories: Technical Trainee </section>
                                     <section>(June 2017 - April 2018)</section>
                                 </section>
                                 <ul>
                                     <li>Role: Joined as a campus hire and began career as an Environmental Engineer, contributing to sustainable operations by optimizing industrial sewage treatment processes.</li>
                                     <li>Projects:
                                         <ul>
-                                            <li>Zero Liquid Discharge Plant: Analyzed daily operations of an industrial sewage treatment plant, identified gaps, and proposed solutions to enhance efficiency and sustainability.</li>
-                                        </ul>
+                                        <li class="project-title">Zero Liquid Discharge Plant</li>
+                                                <ul> 
+                                                    <li>Description: Analyzed daily operations of an industrial sewage treatment plant, identified gaps, and proposed solutions to enhance efficiency and sustainability.</li>
+                                                    <li>Techstack: Excel</li>
+                                                </ul>
+                                       
                                     </li>
                                 </ul>
                             </section>
